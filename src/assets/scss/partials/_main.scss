@@ -1,0 +1,65 @@
+main {
+    padding-top: 50px;
+
+    
+    .img {
+        img {
+            width: 100%;
+        }
+
+        position: relative;
+
+        .banner {
+            position: absolute;
+            bottom: 50px;
+
+            .discount {
+                background-color: red;
+                color: white;
+                text-align: center;
+                width: 50px;
+                padding: 3px 0;
+                font-weight: bold;
+                display: inline-block;
+                margin-right: 5px;
+            
+            }
+            .sustainability {
+                display: inline-block;
+                background-color: green;
+                color: white;
+                text-align: center;
+                padding: 3px 3px;
+                font-weight: bold;
+            }
+        }
+        .heart {
+            position: absolute;
+            right: 0;
+            top: 1rem;
+            font-size: 3rem;
+            padding: 0 15px 0 15px;
+            background-color: white;
+        }
+        .heart:hover{
+            color: red;
+        }
+
+    }
+
+    .text {
+        .price {
+            font-size: 0.8rem;
+        }
+        .actual_price {
+            color: red;
+            font-weight: bold;
+        }
+        
+        .old_price {
+            text-decoration: line-through;
+        }
+    }
+
+
+}

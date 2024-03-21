@@ -2,7 +2,7 @@
     export default {
         name: 'AppHeader'
     }
-    import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+    
    
 
 </script>
