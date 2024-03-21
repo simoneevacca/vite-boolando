@@ -77,7 +77,7 @@ export default {
 <template>
     <main>
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-between">
                 <div class="col col-4" v-for="product in products">
                     <div class="img">
                         <img :src="product.firstImage" alt="">
