@@ -1,0 +1,45 @@
+footer {
+    background-color: black;
+    margin-top: 100px;
+    color: white;
+
+    .foot.container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .society {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .ul_footer {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+        padding: 0;
+        color: white;
+    }
+    
+    li .info{
+        color: white;
+        text-decoration: none;
+    }
+    
+    
+    
+    .social_icon {
+        margin-top: 0.5rem;
+        display: flex;
+        gap: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+
+
+
+}
+
+
