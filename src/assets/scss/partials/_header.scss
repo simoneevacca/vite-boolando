@@ -1,0 +1,24 @@
+header {
+    background-color: rgb(255, 100, 0);
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        div {
+            ul {
+            display: flex;
+            list-style: none;
+            margin-left: -32px;
+                li {
+                    
+                    a {
+                        text-decoration: none;
+                        color: white;
+
+                    }
+
+                }
+            }
+        }
+    }
+}
