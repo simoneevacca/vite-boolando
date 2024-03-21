@@ -78,9 +78,10 @@ export default {
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-4" v-for="product in products">
+                <div class="col col-4" v-for="product in products">
                     <div class="img">
                         <img :src="product.firstImage" alt="">
+                        <img class="hover_fig" :src="product.secondImage" alt="">
                         <div class="banner">
                             <div class="discount" v-if="product.discount">{{product.discount}}</div>
                             <div v-show="product.sostenibilita == true" class="sustainability">Sostenibilità</div>

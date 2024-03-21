@@ -1,18 +1,30 @@
 main {
-    padding-top: 50px;
-
+    // padding-top: 50px;
     
+    .col{
+        margin-top: 80px;
+    }
     .img {
         img {
             width: 100%;
         }
-
+        
         position: relative;
-
+        .hover_fig {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        
+        &:hover .hover_fig {
+            opacity: 1;
+        }
+        
         .banner {
             position: absolute;
             bottom: 50px;
-
+            
             .discount {
                 background-color: red;
                 color: white;
@@ -22,7 +34,7 @@ main {
                 font-weight: bold;
                 display: inline-block;
                 margin-right: 5px;
-            
+                
             }
             .sustainability {
                 display: inline-block;
@@ -44,9 +56,9 @@ main {
         .heart:hover{
             color: red;
         }
-
+        
     }
-
+    
     .text {
         .price {
             font-size: 0.8rem;
@@ -60,6 +72,6 @@ main {
             text-decoration: line-through;
         }
     }
-
-
+    
+    
 }
