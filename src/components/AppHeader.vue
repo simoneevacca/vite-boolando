@@ -2,12 +2,15 @@
     export default {
         name: 'AppHeader'
     }
+    import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+   
+
 </script>
 
 <template>
    <header id="site_header">
         
-            <nav class="nav_container">
+            <nav class="container">
                 <div class="link">
                     <ul class="ul_nav">
                         <li><a class="gender" href="#">Donna</a></li>
