@@ -1,6 +1,13 @@
 <script>
     export default {
-        name: 'AppHeader'
+        name: 'AppHeader',
+        data(){
+            return {
+                logo: '/images/boolean-logo.png',
+                linkNav: ['Donna', 'Uomo', 'Bambino'],
+                iconNav: ['fa-regular fa-user', 'fa-regular fa-heart', 'fa-solid fa-bag-shopping',]
+            }
+        }
     }
     
    
@@ -12,19 +19,15 @@
         
             <nav class="container">
                 <div class="link">
-                    <ul class="ul_nav">
-                        <li><a class="gender" href="#">Donna</a></li>
-                        <li><a class="gender" href="#">Umomo</a></li>
-                        <li><a class="gender" href="#">Bambino</a></li>
+                    <ul class="ul_nav" v-for="link in linkNav">
+                        <li><a class="gender" href="#">{{link}}</a></li>
                     </ul>
                 </div>
                 <div class="logo">
-                    <img width="200px" src="/images/boolean-logo.png" alt="">
+                    <img width="200px" :src="logo" alt="">
                 </div>
-                <div class="user">
-                    <i class="fa-regular fa-user"></i>
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-solid fa-bag-shopping"></i>
+                <div class="user" >
+                    <i v-for="icon in iconNav" :class="icon"></i>
                 </div>
             </nav>
         
