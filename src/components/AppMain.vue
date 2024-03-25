@@ -1,8 +1,7 @@
 <script>
 import productCard from './productCard.vue';
-// import { products } from '../data.js';
+
 import { state } from '../state.js';
-import axios from 'axios';
 
 export default {
     name: 'AppMain',
@@ -11,21 +10,15 @@ export default {
     },
     data() {
         return {
-            // products,
+         
             state,
-            products: []
         }
     },
     mounted () {
 
-        
+        state.GetProduct('http://localhost:3000/products')
 
-        axios.get('http://localhost:3000/products')
-        .then(response => {
-          console.log(response)
-          this.products = response.data
-        })
-        console.log(this.products);
+       
     }
 }
 
@@ -37,7 +30,7 @@ export default {
         <div class="container">
             <div class="row justify-content-between">
 
-                <productCard :product="product" :key="product.id" v-for="product in products" />
+                <productCard :product="product" :key="product.id" v-for="product in state.products" />
 
             </div>
         </div>
