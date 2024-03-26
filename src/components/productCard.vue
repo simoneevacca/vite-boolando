@@ -10,7 +10,7 @@ export default {
 
     methods: {
         modale() {
-            this.$emit('performModale')
+            this.$emit('performModale', this.product.id)
         }
     }
 }

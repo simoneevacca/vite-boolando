@@ -20,9 +20,12 @@ export default {
     },
 
     methods: {
-        modale() {
-            console.log('ciao');
-            console.log(state.products);
+        modale(id) {
+            console.log('ciao', id);
+            this.brand = this.state.products[id - 1].brand;
+            this.model = this.state.products[id - 1].model;
+            this.price = this.state.products[id - 1].price;
+            
 
         }
     },
