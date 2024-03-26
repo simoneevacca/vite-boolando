@@ -16,7 +16,10 @@ export default {
             isActive: false,
             brand: '',
             model: '',
-            price: ''
+            price: '',
+            firstImage: '',
+            secondImage: '',
+
         }
     },
 
@@ -27,9 +30,12 @@ export default {
             this.brand = this.state.products[id - 1].brand;
             this.model = this.state.products[id - 1].model;
             this.price = this.state.products[id - 1].price;
+            this.firstImage = this.state.products[id - 1].firstImage;
+            this.secondImage = this.state.products[id - 1].secondImage;
+
         },
 
-        closeModale (){
+        closeModale() {
             this.isActive = false
             console.log(this.isActive);
         }
@@ -61,11 +67,20 @@ export default {
             </div>
         </div>
 
-        <div :class="{modale: isActive}" v-show="isActive == true">
+        <div :class="{ modale: isActive }" v-show="isActive == true">
             <div class="close" @click="closeModale">X</div>
-            <div>marca: {{ brand }}</div>
-            <div>modello: {{ model }}</div>
-            <div>Prezzo: {{ price }}</div>
+            <div class="content">
+                <div class="left">
+                    <img :src="firstImage" alt="">
+                    <img :src="secondImage" alt="">
+                    
+                </div>
+                <div class="right">
+                    <div>Marca: {{ brand }}</div>
+                    <div>Modello: {{ model }}</div>
+                    <div>Prezzo: {{ price }}€</div>
+                </div>
+            </div>
 
 
         </div>

@@ -1,26 +1,49 @@
 main {
-   position: relative;
+    position: relative;
 
-   .modale {
-       position: absolute;
-       top: 50vh;
-       left: 50vw;
-       transform:translate(-50%, -50%) ;
-       background-color: white;
-       border: 1px solid black;
-       width: 200px;
-       padding: 1rem;
-       border-radius: 10px;
+    .modale {
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        width: 400px;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.405);
+        .close {
+            border-bottom: 1px solid grey;
+            text-align: end;
+            cursor: pointer;
+            font-weight: bold;
+            color: red;
+            font-size: 1.5rem;
+        }
+        .content{
+            padding: 1rem;
+            display: flex;
+            gap: 1rem;
+            .left {
+                display: flex;
+                flex-direction: column;
+                gap: 0.2rem;
+                img {
+                    width: 100px;
+                    
+                }
+            }
+        }
       
-       
-   }
+    }
+
+
     .col {
         margin-top: 80px;
         width: 350px;
         position: relative;
 
 
-       
+
     }
 
     .img {
@@ -94,6 +117,10 @@ main {
 
         .old_price {
             text-decoration: line-through;
+        }
+
+        .name {
+            cursor: pointer;
         }
     }
 
