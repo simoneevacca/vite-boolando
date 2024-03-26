@@ -14,6 +14,12 @@ export default {
             state,
         }
     },
+
+    methods: {
+        modale(){
+            console.log('ciao');
+        }
+    },
     mounted () {
 
         state.GetProduct('http://localhost:3000/products')
@@ -30,7 +36,7 @@ export default {
         <div class="container">
             <div class="row justify-content-between">
 
-                <productCard :product="product" :key="product.id" v-for="product in state.products" />
+                <productCard @performModale="modale" :product="product" :key="product.id" v-for="product in state.products" />
 
             </div>
         </div>

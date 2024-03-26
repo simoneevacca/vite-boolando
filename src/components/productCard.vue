@@ -1,8 +1,15 @@
 <script>
 export default {
     name: 'productCard',
+    emits:['performModale'],
     props: {
         product: Object
+    },
+    
+    methods: {
+        modale (){
+           this.$emit('performModale')
+        }
     }
 }
 </script>
@@ -21,7 +28,7 @@ export default {
         </div>
         <div class="text">
             <div class="brand">{{ product.brand }}</div>
-            <div class="name"><strong>{{ product.model }}</strong></div>
+            <div class="name" @click="modale"><strong>{{ product.model }}</strong></div>
             <div class="price">
                 <span class="actual_price">{{ product.price }} &euro; </span>
                 <span class="old_price" v-if="product.discount"> {{ product.oldPrice }} &euro;</span>
