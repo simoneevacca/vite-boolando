@@ -8,10 +8,8 @@ GetProduct(url) {
 
     axios.get(url)
     .then(response => {
-      console.log(response)
       this.products = response.data
-    }),
-    console.log(this.products);
+    })   
 }
 })
 

@@ -32,7 +32,6 @@ export default {
          */
         modale(id) {
             this.isActive = true
-            console.log('ciao', id);
             this.brand = this.state.products[id - 1].brand;
             this.model = this.state.products[id - 1].model;
             this.price = this.state.products[id - 1].price;
@@ -43,7 +42,6 @@ export default {
 
         closeModale() {
             this.isActive = false
-            console.log(this.isActive);
         }
     },
 
