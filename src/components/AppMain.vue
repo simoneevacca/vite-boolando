@@ -13,6 +13,7 @@ export default {
 
             state,
 
+            isActive: false,
             brand: '',
             model: '',
             price: ''
@@ -21,12 +22,16 @@ export default {
 
     methods: {
         modale(id) {
+            this.isActive = true
             console.log('ciao', id);
             this.brand = this.state.products[id - 1].brand;
             this.model = this.state.products[id - 1].model;
             this.price = this.state.products[id - 1].price;
-            
+        },
 
+        closeModale (){
+            this.isActive = false
+            console.log(this.isActive);
         }
     },
     mounted() {
@@ -56,7 +61,8 @@ export default {
             </div>
         </div>
 
-        <div class="modale">
+        <div :class="{modale: isActive}" v-show="isActive == true">
+            <div class="close" @click="closeModale">X</div>
             <div>marca: {{ brand }}</div>
             <div>modello: {{ model }}</div>
             <div>Prezzo: {{ price }}</div>
