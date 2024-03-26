@@ -1,14 +1,16 @@
 <script>
 export default {
     name: 'productCard',
-    emits:['performModale'],
+    emits: ['performModale'],
     props: {
-        product: Object
+        product: Object,
+        
     },
-    
+   
+
     methods: {
-        modale (){
-           this.$emit('performModale')
+        modale() {
+            this.$emit('performModale')
         }
     }
 }
@@ -16,7 +18,6 @@ export default {
 
 <template>
 
-    <div class="col col-4">
         <div class="img">
             <img :src="product.firstImage" alt="">
             <img class="hover_fig" :src="product.secondImage" alt="">
@@ -34,7 +35,7 @@ export default {
                 <span class="old_price" v-if="product.discount"> {{ product.oldPrice }} &euro;</span>
             </div>
         </div>
-    </div>
+       
 
 </template>
 

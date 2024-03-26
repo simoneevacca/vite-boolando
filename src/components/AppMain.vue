@@ -10,21 +10,28 @@ export default {
     },
     data() {
         return {
-         
+
             state,
+
+            brand: '',
+            model: '',
+            price: ''
         }
     },
 
     methods: {
-        modale(){
+        modale() {
             console.log('ciao');
+            console.log(state.products);
+
         }
     },
-    mounted () {
+    mounted() {
 
         state.GetProduct('http://localhost:3000/products')
 
-       
+
+
     }
 }
 
@@ -35,10 +42,23 @@ export default {
     <main>
         <div class="container">
             <div class="row justify-content-between">
+                <div class="col col-4" v-for="product in state.products">
 
-                <productCard @performModale="modale" :product="product" :key="product.id" v-for="product in state.products" />
+                    <productCard @performModale="modale" :product="product" :key="product.id" />
+
+
+
+                </div>
 
             </div>
+        </div>
+
+        <div class="modale">
+            <div>marca: {{ brand }}</div>
+            <div>modello: {{ model }}</div>
+            <div>Prezzo: {{ price }}</div>
+
+
         </div>
     </main>
 

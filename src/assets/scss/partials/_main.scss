@@ -1,9 +1,25 @@
 main {
-   
+   position: relative;
 
+   .modale {
+       position: absolute;
+       top: 50vh;
+       left: 50vw;
+       transform:translate(-50%, -50%) ;
+       background-color: white;
+       border: 1px solid black;
+       width: 200px;
+       padding: 1rem;
+       border-radius: 10px;
+      
+       
+   }
     .col {
         margin-top: 80px;
         width: 350px;
+        position: relative;
+
+
        
     }
 
